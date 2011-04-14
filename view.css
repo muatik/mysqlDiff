@@ -1,0 +1,15 @@
+body{font:14px helvetica;}
+b.table{font:bold 18px helvetica;}
+b.group{font:bold 15px helvetica;color:#124990}
+b.column{font:bold 15px helvetica;color:#222}
+b.exists{color:#00aa00}
+b.absent{color:#df4000}
+b.field{font:bold italic 12px helvetica;color:#786868}
+li.value1{font:12px helvetica;color:#019645}
+li.value2{font:12px helvetica;color:#911605}
+
+.legend span{padding:2px 4px;color:#fff;font:bold 12px arial;}
+.legend .db1{background-color:#019645}
+.legend .db2{background-color:#df4000}
+
+hr.footer{margin-top:60px}
