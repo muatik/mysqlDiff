@@ -39,8 +39,11 @@ function showDiffs($diff){
 			count($i->columnDiff)>0 
 			|| count($i->columnDiffr)>0 
 			|| isset($i->columns)
-		))
+		)){
+			echo '</ul></li>';
 			continue;
+		}
+		
 		echo '<li><b class="group">SÜTUN:</b><ul>';
 		
 		foreach($i->columnDiff as $c)

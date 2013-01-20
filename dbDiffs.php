@@ -14,6 +14,19 @@ class dbDiffs
 	public $db;
 	
 	public function __construct(){
+		
+		// tablo karşılaştırma kriterleri.
+		$this->tableFields=array(
+			'ENGINE','TABLE_COLLATION','TABLE_COMMENT'
+		);
+		
+		// sütun karşılaştırma kriterleri
+		$this->columnFields=array(
+			'COLUMN_TYPE','COLUMN_DEFAULT','IS_NULLABLE',
+			'CHARACTER_SET_NAME','COLLATION_NAME',
+			'COLUMN_KEY','EXTRA','COLUMN_COMMENT'
+		);
+		
 		$this->db=new db();
 		$this->db->database='information_schema';
 	}
@@ -54,7 +67,7 @@ class dbDiffs
 			$tblDiff=$this->compareObjects(
 				$db1->tables[$t],
 				$db2->tables[$t],
-				array('ENGINE','TABLE_COLLATION','TABLE_COMMENT')
+				$this->tableFields
 			);
 			
 			
@@ -89,9 +102,7 @@ class dbDiffs
 				$cDiff=$this->compareObjects(
 					$t1Clm[$c],
 					$t2Clm[$c],
-					array('COLUMN_TYPE','COLUMN_DEFAULT','IS_NULLABLE',
-					'CHARACTER_SET_NAME','COLLATION_NAME',
-					'COLUMN_KEY','EXTRA','COLUMN_COMMENT')
+					$this->columnFields
 				);
 				
 				if(count($cDiff)>0)
