@@ -44,6 +44,6 @@ if(isset($r['db1'],$r['db2'])){
 }
 ?>
 <hr class="footer" />
-<a href="http://cookingthecode.com/a48_Veritabanlari-Arasindaki-Farklar">cookingthecode.com</a>
+<a href="http://coding.mustafaatik.com/a148_Veritabanlari-Arasindaki-Farklar-dbDiffs">mustafaatik.com</a>
 </body>
 </html>
