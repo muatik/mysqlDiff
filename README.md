@@ -45,4 +45,4 @@ Table structure for table `users`
 
 Sample output:
 
-![screenshot1](https://raw.github.com/muatik/dbDiffs/master/screen1.png "example 1")
+![screenshot1](https://raw.github.com/muatik/mysqlDiff/master/screen1.png "example 1")
