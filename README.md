@@ -1,4 +1,4 @@
-dbDiffs
+mysqlDiff - mysql database differences
 =========
 This is a tool that displays schema differences between two versions of same mysql databases.
 
