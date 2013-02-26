@@ -20,7 +20,7 @@ function showDiffs($diff){
 		echo '<li><b class="table">'.$t.'</b><ul>';
 		
 		if(isset($i->structure)){
-			echo '<li><b class="group">YAPI:</b><ul>';
+			echo '<li><b class="group">STRUCTURE:</b><ul>';
 			foreach($i->structure as $s) {
 				echo '<li><b class="field">'.$s['field'].'</b><ul>';
 					if($s['value1']!='')
@@ -44,7 +44,7 @@ function showDiffs($diff){
 			continue;
 		}
 		
-		echo '<li><b class="group">SÜTUN:</b><ul>';
+		echo '<li><b class="group">COLUMNS:</b><ul>';
 		
 		foreach($i->columnDiff as $c)
 			echo '<li><b class="column exists">'.$c.'</b></li>';

@@ -29,16 +29,16 @@ $select.='</select>';
 
 echo '<form action="?" method="post">';
 echo 'db1: '.sprintf($select,'db1').' db2: '.sprintf($select,'db2');
-echo '<input type="submit" value="karşılaştır" />
+echo '<input type="submit" value="compare" />
 </form>';
 
 if(isset($r['db1'],$r['db2'])){
 	$diff=$dd->check($r['db2'],$r['db1']);
 	echo '<hr />
-	<h1>Farklar: </h1>
+	<h1>DIFFERENCES: </h1>
 	<div class="legend">
-		<span class="db1">'.$r['db1'].'\'de olup '.$r['db2'].'\'de olmayanlar</span>
-		<span class="db2">'.$r['db2'].'\'de olup '.$r['db1'].'\'de olmayanlar</span>
+		<span class="db1">Tables absent in '.$r['db2'].'</span>
+		<span class="db2">Tables absent in '.$r['db1'].'</span>
 	</div>';
 	showDiffs($diff);
 }
